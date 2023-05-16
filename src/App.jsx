@@ -2,6 +2,7 @@ import { useEffect } from "react"
 import Navbar from "./components/Navbar"
 import BookList from "./BookList"
 import ThemeContextProvider from "./context/ThemeContext"
+import ThemeToggle from "./context/ThemeToggle"
 
 export default function App() {
 useEffect(() => {
@@ -11,7 +12,8 @@ useEffect(() => {
     <div className="app">
       <ThemeContextProvider>
         <Navbar/>
-        <BookList/> 
+        <BookList/>
+        <ThemeToggle/> 
       </ThemeContextProvider>
     </div>
   )
