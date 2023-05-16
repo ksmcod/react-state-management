@@ -1,10 +1,18 @@
-import { useState } from "react";
+import { useEffect } from "react"
+import Navbar from "./components/Navbar"
+import BookList from "./BookList"
+import ThemeContextProvider from "./context/ThemeContext"
 
 export default function App() {
-  const [count,setCount] = useState(0)
-  return (
-    <div>
-      <button onClick={() => setCount(count + 1)}>Count = {count}</button>
+useEffect(() => {
+  document.title = "Context & Hooks"
+},[])
+  return(
+    <div className="app">
+      <ThemeContextProvider>
+        <Navbar/>
+        <BookList/> 
+      </ThemeContextProvider>
     </div>
   )
 }
