@@ -5,7 +5,6 @@ export default function ThemeToggle() {
     <ThemeContext.Consumer>
         {context => {
             const { toggleTheme } = context
-            console.log(context)
             return (
                 <button onClick={ toggleTheme }>Toggle Theme</button>
             )
